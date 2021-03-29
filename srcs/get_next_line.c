@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 13:21:44 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/29 14:55:28 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/get_next_line.h"
 
-int		ft_strlen_c(char *str, char c)
+int	ft_strlen_c(char *str, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str && str[i] && str[i] != c)
@@ -10,9 +22,9 @@ int		ft_strlen_c(char *str, char c)
 	return (i);
 }
 
-int		ft_is_c(char *str, char c)
+int	ft_is_c(char *str, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str && str[i])
@@ -24,9 +36,9 @@ int		ft_is_c(char *str, char c)
 	return (0);
 }
 
-int		ft_get_info(char **storage_read, char **line, char c)
+int	ft_get_info(char **storage_read, char **line, char c)
 {
-	void *tmp;
+	void	*tmp;
 
 	tmp = *storage_read;
 	*line = ft_strdup_c(*storage_read, c);
@@ -39,10 +51,10 @@ int		ft_get_info(char **storage_read, char **line, char c)
 	return (0);
 }
 
-int		ft_file_reading(int fd, char **storage_read, char **line)
+int	ft_file_reading(int fd, char **storage_read, char **line)
 {
-	int			ret_read;
-	char		*buf;
+	int		ret_read;
+	char	*buf;
 
 	if (!(buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
 		return (-1);
@@ -51,8 +63,8 @@ int		ft_file_reading(int fd, char **storage_read, char **line)
 		if (ret_read == -1)
 			break ;
 		buf[ret_read] = '\0';
-		if ((*storage_read = ft_strjoin(*storage_read, buf)) &&
-		ft_is_c(buf, '\n') == 1)
+		if ((*storage_read = ft_strjoin(*storage_read, buf))
+			&&ft_is_c(buf, '\n') == 1)
 			break ;
 	}
 	free(buf);
@@ -63,7 +75,7 @@ int		ft_file_reading(int fd, char **storage_read, char **line)
 	return (GNL_ERROR);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	*storage_read[250];
 
@@ -71,7 +83,7 @@ int		get_next_line(int fd, char **line)
 		return (GNL_ERROR);
 	if (fd >= 0 && !(storage_read[fd]))
 	{
-		if (!(storage_read[fd] = (char*)malloc(1)))
+		if (!(storage_read[fd] = (char *)malloc(1)))
 			return (0);
 		storage_read[fd][0] = '\0';
 	}

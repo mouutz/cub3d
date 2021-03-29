@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_save.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 13:10:45 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 13:10:49 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-void		ft_init_struct_save(t_storage *storage, t_save *s)
+void	ft_init_struct_save(t_storage *storage, t_save *s)
 {
 	s->size = 54 + 4 * storage->info->rx * storage->info->ry;
 	s->unused = 0;
@@ -13,7 +25,7 @@ void		ft_init_struct_save(t_storage *storage, t_save *s)
 		ft_management_error(9, "Error: open file .bmp\n");
 }
 
-void		ft_write_texture_bmp_file(t_storage *storage, int fd)
+void	ft_write_texture_bmp_file(t_storage *storage, int fd)
 {
 	int		y;
 	int		x;
@@ -34,7 +46,7 @@ void		ft_write_texture_bmp_file(t_storage *storage, int fd)
 	}
 }
 
-void		ft_write_bmp_file(t_storage *storage)
+void	ft_write_bmp_file(t_storage *storage)
 {
 	t_save	s;
 
@@ -58,7 +70,7 @@ void		ft_write_bmp_file(t_storage *storage)
 	close(s.fd);
 }
 
-void		ft_save(t_info *info_map, t_mlx *mlx)
+void	ft_save(t_info *info_map, t_mlx *mlx)
 {
 	t_move		move;
 	t_player	player;
@@ -77,7 +89,7 @@ void		ft_save(t_info *info_map, t_mlx *mlx)
 	if ((mlx->ptr = mlx_init()) == NULL)
 		ft_management_error(9, "Error: init mlx fail\n");
 	if ((mlx->win = mlx_new_window(mlx->ptr, info_map->rx,
-		info_map->ry, "Save")) == NULL)
+				info_map->ry, "Save")) == NULL)
 		ft_management_error(9, "Error: Windows fail\n");
 	ft_init_texture(&storage, texture, 64, 64);
 	ft_expose(&storage);

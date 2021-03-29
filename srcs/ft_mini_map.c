@@ -17,7 +17,7 @@ void	ft_color_wall_mini_map(t_storage *storage, int y, int x, int color)
 		while (mini_map.x < mini_map.x_max)
 		{
 			*(int *)(&storage->mlx->data_img[(mini_map.line + mini_map.x)
-			* storage->mlx->bpixel]) = color;
+			*storage->mlx->bpixel]) = color;
 			mini_map.x++;
 		}
 		mini_map.line += storage->info->rx;

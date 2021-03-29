@@ -1,4 +1,16 @@
-int		ft_strncmp(const char *s1, const char *s2, int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 13:15:13 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 13:15:35 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_strncmp(const char *s1, const char *s2, int n)
 {
 	int					i;
 	unsigned char		*src1;

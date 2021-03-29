@@ -1,19 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_movement_player.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:29:43 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:36:18 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	ft_move_player_mini_map(t_storage *s)
 {
-	s->player->x = (int)(s->player->pos_x * ((s->info->rx / 4) /
-	s->info->len_x));
-	s->player->y = (int)(s->player->pos_y * ((s->info->ry / 4) /
-	s->info->len_y)) * s->mlx->size_line / 4;
-	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y + 1) *
-	4]) = 255;
-	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y - 1) *
-	4]) = 255;
-	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y +
-	(s->mlx->size_line / 4)) * 4]) = 255;
-	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y -
-	(s->mlx->size_line / 4)) * 4]) = 255;
+	s->player->x = (int)(s->player->pos_x * ((s->info->rx / 4)
+				/s->info->len_x));
+	s->player->y = (int)(s->player->pos_y * ((s->info->ry / 4)
+				/s->info->len_y))*s->mlx->size_line / 4;
+	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y + 1)
+	*4]) = 255;
+	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y - 1)
+	*4]) = 255;
+	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y
+	+(s->mlx->size_line / 4))*4]) = 255;
+	*(int *)(&s->mlx->data_img[(int)(s->player->x + s->player->y
+	-(s->mlx->size_line / 4))*4]) = 255;
 }
 
 void	ft_player_pos_x(t_storage *s, t_player *p)
@@ -50,9 +62,9 @@ void	ft_player_pos_dir(t_storage *s, t_player *p)
 		p->dir_y = old_dir_x * sin(-p->rot_s) + p->dir_y * cos(-p->rot_s);
 		old_plane_x = s->ray->plane_y;
 		s->ray->plane_y = s->ray->plane_y * cos(p->rot_s) - s->ray->plane_x
-		* sin(p->rot_s);
+			* sin(p->rot_s);
 		s->ray->plane_x = old_plane_x * sin(p->rot_s) + s->ray->plane_x
-		* cos(p->rot_s);
+			* cos(p->rot_s);
 	}
 	if (s->move->turn_right == 1)
 	{
@@ -61,9 +73,9 @@ void	ft_player_pos_dir(t_storage *s, t_player *p)
 		p->dir_y = old_dir_x * sin(p->rot_s) + p->dir_y * cos(p->rot_s);
 		old_plane_x = s->ray->plane_y;
 		s->ray->plane_y = s->ray->plane_y * cos(-p->rot_s) - s->ray->plane_x
-		* sin(-p->rot_s);
+			* sin(-p->rot_s);
 		s->ray->plane_x = old_plane_x * sin(-p->rot_s) + s->ray->plane_x
-		* cos(-p->rot_s);
+			* cos(-p->rot_s);
 	}
 }
 

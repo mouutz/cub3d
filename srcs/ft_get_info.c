@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_info.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:25:35 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:26:40 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int		ft_get_resolution(char *s, t_info *info_map)
+int	ft_get_resolution(char *s, t_info *info_map)
 {
 	int	i;
 
@@ -14,7 +26,7 @@ int		ft_get_resolution(char *s, t_info *info_map)
 	return (1);
 }
 
-int		ft_get_texture_path_north_south(char *s, t_info *info_map)
+int	ft_get_texture_path_north_south(char *s, t_info *info_map)
 {
 	int	i;
 
@@ -36,7 +48,7 @@ int		ft_get_texture_path_north_south(char *s, t_info *info_map)
 	return (1);
 }
 
-int		ft_convert_rgb_to_integer(char *s)
+int	ft_convert_rgb_to_integer(char *s)
 {
 	int		i;
 	int		nb[4];
@@ -64,7 +76,7 @@ int		ft_convert_rgb_to_integer(char *s)
 	return (nb[i]);
 }
 
-int		ft_get_color(char *s, t_info *info_map)
+int	ft_get_color(char *s, t_info *info_map)
 {
 	if (s[0] == 'F' && info_map->colorf == 0)
 		info_map->colorf = ft_convert_rgb_to_integer(s);
@@ -80,7 +92,7 @@ int		ft_get_color(char *s, t_info *info_map)
 	return (1);
 }
 
-int		ft_get_info_map(char *s, t_info *info_map)
+int	ft_get_info_map(char *s, t_info *info_map)
 {
 	if (s[0] == 'R')
 		return (ft_get_info_map_resolution(s, info_map));
@@ -90,7 +102,7 @@ int		ft_get_info_map(char *s, t_info *info_map)
 			return (0);
 	}
 	else if ((s[0] == 'W' && s[1] == 'E')
-	|| (s[0] == 'E' && s[1] == 'A') || (s[0] == 'S' && s[1] == ' '))
+		|| (s[0] == 'E' && s[1] == 'A') || (s[0] == 'S' && s[1] == ' '))
 	{
 		if ((ft_get_texture_path_west_east_s(s, info_map)) == 0)
 			return (0);

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_read_map.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:59:44 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 13:01:16 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int		ft_read_map(t_info *info_map, int fd, char *line)
+int	ft_read_map(t_info *info_map, int fd, char *line)
 {
 	int		i;
 	char	*map_tmp;
@@ -24,7 +36,7 @@ int		ft_read_map(t_info *info_map, int fd, char *line)
 	return (1);
 }
 
-int		ft_read_info(char *s, t_info *info_map)
+int	ft_read_info(char *s, t_info *info_map)
 {
 	int		i;
 	int		fd;
@@ -43,7 +55,7 @@ int		ft_read_info(char *s, t_info *info_map)
 	return (1);
 }
 
-int		ft_read_management(char *s, t_info *info_map)
+int	ft_read_management(char *s, t_info *info_map)
 {
 	t_len_map	len;
 

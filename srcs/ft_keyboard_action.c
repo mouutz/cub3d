@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_keyboard_action.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:26:57 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:27:08 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int					ft_keyrelease(int keycode, t_move *move)
+int	ft_keyrelease(int keycode, t_move *move)
 {
 	if (keycode == 53)
 		move->esc = 0;
@@ -21,7 +33,7 @@ int					ft_keyrelease(int keycode, t_move *move)
 	return (0);
 }
 
-int					ft_keypress(int keycode, t_move *move)
+int	ft_keypress(int keycode, t_move *move)
 {
 	if (keycode == 53)
 		move->esc = 1;

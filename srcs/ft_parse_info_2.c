@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_info_2.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:55:50 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:55:51 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int		ft_get_pos_player(t_info *info_map, int i, int x)
+int	ft_get_pos_player(t_info *info_map, int i, int x)
 {
 	if (info_map->player_start == '0')
 	{

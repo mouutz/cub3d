@@ -1,234 +1,57 @@
-ft_cub3d.c: KO!
-	ASSIGN_IN_CONTROL    (line:  45, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  47, col:  20):	Assignment in control structure
+ft_cub3d.c: Error!
+	ASSIGN_IN_CONTROL    (line:  57, col:  19):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  59, col:  20):	Assignment in control structure
 ft_draw_wall_color.c: OK!
-ft_draw_wall_texture.c: KO!
-	TOO_FEW_TAB          (line:  24, col:   1):	Missing tabs for indent level
-	LINE_TOO_LONG        (line:  24, col:  83):	line too long
-	TOO_MANY_TAB         (line:  26, col:   1):	Extra tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  40, col:  76):	missing space after operator
-	EOL_OPERATOR         (line:  40, col:  77):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  41, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  43, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  43, col:  76):	missing space after operator
-	SPC_AFTER_OPERATOR   (line:  52, col:  76):	missing space after operator
-	EOL_OPERATOR         (line:  52, col:  77):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  53, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  55, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  55, col:  76):	missing space after operator
-ft_error.c: KO!
-	TOO_MANY_TABS_FUNC   (line:  62, col:   5):	extra tabs before function name
-ft_exit_prog.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:  17):	extra tabs before function name
-ft_fill_map.c: KO!
+ft_draw_wall_texture.c: Error!
+	TOO_MANY_LINES       (line:  44, col:   1):	Function has more than 25 lines
+	TOO_MANY_LINES       (line:  75, col:   1):	Function has more than 25 lines
+ft_error.c: OK!
+ft_exit_prog.c: OK!
+ft_fill_map.c: Error!
 	ASSIGN_IN_CONTROL    (line:  37, col:  19):	Assignment in control structure
 	ASSIGN_IN_CONTROL    (line:  42, col:  26):	Assignment in control structure
-ft_get_info.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  17, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  39, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  67, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  83, col:   5):	extra tabs before function name
-	TOO_FEW_TAB          (line:  93, col:   5):	Missing tabs for indent level
+ft_get_info.c: OK!
 ft_init.c: OK!
 ft_init_storage.c: OK!
-ft_keyboard_action.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:  17):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  24, col:  17):	extra tabs before function name
+ft_keyboard_action.c: OK!
 ft_memcpy.c: OK!
-ft_mini_map.c: KO!
-	SPC_AFTER_POINTER    (line:  20, col:  13):	space after pointer
-ft_movement_player.c: KO!
-	SPC_AFTER_OPERATOR   (line:   5, col:  64):	missing space after operator
-	EOL_OPERATOR         (line:   5, col:  65):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:   6, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:   7, col:  64):	missing space after operator
-	EOL_OPERATOR         (line:   7, col:  65):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:   8, col:   1):	Missing tabs for indent level
-	SPC_AFTER_POINTER    (line:   8, col:  22):	space after pointer
-	SPC_AFTER_OPERATOR   (line:  13, col:  66):	missing space after operator
-	SPC_AFTER_POINTER    (line:  14, col:  30):	space after pointer
-	SPC_AFTER_OPERATOR   (line:  15, col:  66):	missing space after operator
-	SPC_AFTER_POINTER    (line:  16, col:  30):	space after pointer
-	TOO_FEW_TAB          (line:  53, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  55, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  64, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  66, col:   1):	Missing tabs for indent level
-ft_parse_info.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  25, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  38, col:   5):	extra tabs before function name
-	TERNARY_FBIDDEN      (line:  44, col:   1):	Ternaries are forbidden
-	TERNARY_FBIDDEN      (line:  46, col:   1):	Ternaries are forbidden
-	TOO_FEW_TAB          (line:  46, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  47, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  48, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  49, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  50, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  51, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  52, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  53, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  54, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  55, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  56, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  57, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  58, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  59, col:   1):	Missing tabs for indent level
-	EMPTY_LINE_FUNCTION  (line:  60, col:   1):	Empty line in function
-	TOO_FEW_TAB          (line:  61, col:   1):	Missing tabs for indent level
-	TAB_INSTEAD_SPC      (line:  61, col:   4):	Found tab when expecting space
-	SPC_AFTER_OPERATOR   (line:  61, col:  29):	missing space after operator
-	VAR_DECL_START_FUNC  (line:  64, col:   1):	Variable declaration not at start of function
-	EOL_OPERATOR         (line:  72, col:  74):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  72, col:  74):	missing space after operator
-	TOO_FEW_TAB          (line:  73, col:  13):	Missing tabs for indent level
-	EOL_OPERATOR         (line:  73, col:  70):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  73, col:  70):	missing space after operator
-	TOO_FEW_TAB          (line:  74, col:  13):	Missing tabs for indent level
-	EOL_OPERATOR         (line:  74, col:  70):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  74, col:  70):	missing space after operator
-	TOO_FEW_TAB          (line:  75, col:  13):	Missing tabs for indent level
-	EOL_OPERATOR         (line:  77, col:  74):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  77, col:  74):	missing space after operator
-	TOO_FEW_TAB          (line:  78, col:  13):	Missing tabs for indent level
-	TOO_MANY_LINES       (line:  88, col:   1):	Function has more than 25 lines
-	TOO_MANY_TABS_FUNC   (line:  90, col:   5):	extra tabs before function name
-	EOL_OPERATOR         (line:  94, col:  45):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  94, col:  45):	missing space after operator
-	TOO_FEW_TAB          (line:  95, col:   5):	Missing tabs for indent level
-ft_parse_info_2.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-ft_parse_map.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  37, col:   5):	extra tabs before function name
-	EOL_OPERATOR         (line:  48, col:  43):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  48, col:  43):	missing space after operator
-	TOO_FEW_TAB          (line:  49, col:   5):	Missing tabs for indent level
-	TOO_MANY_TABS_FUNC   (line:  54, col:   5):	extra tabs before function name
-	EOL_OPERATOR         (line:  66, col:  39):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  66, col:  39):	missing space after operator
-	TOO_FEW_TAB          (line:  67, col:   5):	Missing tabs for indent level
-	TOO_MANY_TABS_FUNC   (line:  72, col:   5):	extra tabs before function name
-	EOL_OPERATOR         (line:  82, col:  47):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  82, col:  47):	missing space after operator
-	TOO_FEW_TAB          (line:  83, col:  13):	Missing tabs for indent level
-ft_raycaster.c: KO!
-	TOO_FEW_TAB          (line:   9, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  15, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  21, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  27, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  51, col:  66):	missing space after operator
-	EOL_OPERATOR         (line:  51, col:  67):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  52, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  54, col:  66):	missing space after operator
-	EOL_OPERATOR         (line:  54, col:  67):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  55, col:   1):	Missing tabs for indent level
-ft_read_map.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	ASSIGN_IN_CONTROL    (line:   9, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  15, col:  15):	Assignment in control structure
-	TOO_MANY_TABS_FUNC   (line:  27, col:   5):	extra tabs before function name
-	ASSIGN_IN_CONTROL    (line:  34, col:  13):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  36, col:  16):	Assignment in control structure
-	TOO_MANY_TABS_FUNC   (line:  46, col:   5):	extra tabs before function name
-ft_save.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   9):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  16, col:   9):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  37, col:   9):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  61, col:   9):	extra tabs before function name
-	ASSIGN_IN_CONTROL    (line:  77, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  79, col:  19):	Assignment in control structure
-	TOO_FEW_TAB          (line:  80, col:   9):	Missing tabs for indent level
-ft_split.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	SPACE_REPLACE_TAB    (line:   6, col:   8):	Found space when expecting tab
-	TOO_MANY_TABS_FUNC   (line:  20, col:   5):	extra tabs before function name
-	SPACE_REPLACE_TAB    (line:  23, col:   8):	Found space when expecting tab
-	ASSIGN_IN_CONTROL    (line:  48, col:  20):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  99, col:  17):	Assignment in control structure
-ft_sprite.c: KO!
-	TOO_FEW_TAB          (line:  12, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  15, col:   9):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  20, col:  13):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  23, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  23, col:  77):	missing space after operator
-	SPC_AFTER_OPERATOR   (line:  37, col:  62):	missing space after operator
-	EOL_OPERATOR         (line:  37, col:  63):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  38, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  39, col:  65):	missing space after operator
-	EOL_OPERATOR         (line:  39, col:  66):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  40, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  41, col:  65):	missing space after operator
-	EOL_OPERATOR         (line:  41, col:  66):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  42, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  43, col:  68):	missing space after operator
-	EOL_OPERATOR         (line:  43, col:  69):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  44, col:   1):	Missing tabs for indent level
-	SPC_AFTER_OPERATOR   (line:  93, col:  64):	missing space after operator
-	EOL_OPERATOR         (line:  93, col:  65):	Logic operator at the end of line
-	TOO_FEW_TAB          (line:  94, col:   1):	Missing tabs for indent level
-	VLA_FORBIDDEN        (line: 104, col:  38):	Variable length array forbidden
-	VLA_FORBIDDEN        (line: 105, col:  41):	Variable length array forbidden
-ft_strcpy.c: KO!
-	SPACE_REPLACE_TAB    (line:   3, col:   8):	Found space when expecting tab
-ft_strdup_map.c: KO!
-	ASSIGN_IN_CONTROL    (line:  17, col:  16):	Assignment in control structure
-ft_strncmp.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   1, col:   5):	extra tabs before function name
-ft_texture.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	TOO_FEW_TAB          (line:   6, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  10, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  14, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  18, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  22, col:   1):	Missing tabs for indent level
-	TOO_MANY_TABS_FUNC   (line:  28, col:   5):	extra tabs before function name
+ft_mini_map.c: OK!
+ft_movement_player.c: OK!
+ft_parse_info.c: OK!
+ft_parse_info_2.c: OK!
+ft_parse_map.c: OK!
+ft_raycaster.c: OK!
+ft_read_map.c: Error!
+	ASSIGN_IN_CONTROL    (line:  21, col:  19):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  27, col:  15):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  46, col:  13):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  48, col:  16):	Assignment in control structure
+ft_save.c: Error!
+	ASSIGN_IN_CONTROL    (line:  89, col:  19):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  91, col:  19):	Assignment in control structure
+ft_split.c: Error!
+	ASSIGN_IN_CONTROL    (line:  60, col:  20):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line: 111, col:  17):	Assignment in control structure
+ft_sprite.c: Error!
+	VLA_FORBIDDEN        (line: 116, col:  38):	Variable length array forbidden
+	VLA_FORBIDDEN        (line: 117, col:  41):	Variable length array forbidden
+ft_strcpy.c: OK!
+ft_strdup_map.c: Error!
+	ASSIGN_IN_CONTROL    (line:  29, col:  16):	Assignment in control structure
+ft_strncmp.c: OK!
+ft_texture.c: Error!
 	ASSIGN_IN_CONTROL    (line:  31, col:  25):	Assignment in control structure
-	TOO_FEW_TAB          (line:  32, col:   5):	Missing tabs for indent level
 	ASSIGN_IN_CONTROL    (line:  34, col:  25):	Assignment in control structure
-	TOO_FEW_TAB          (line:  35, col:   5):	Missing tabs for indent level
 	ASSIGN_IN_CONTROL    (line:  37, col:  25):	Assignment in control structure
-	TOO_FEW_TAB          (line:  38, col:   5):	Missing tabs for indent level
 	ASSIGN_IN_CONTROL    (line:  40, col:  25):	Assignment in control structure
-	TOO_FEW_TAB          (line:  41, col:   5):	Missing tabs for indent level
 	ASSIGN_IN_CONTROL    (line:  43, col:  25):	Assignment in control structure
-	TOO_FEW_TAB          (line:  44, col:   5):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  65, col:   1):	Missing tabs for indent level
-	TOO_FEW_TAB          (line:  68, col:   1):	Missing tabs for indent level
-ft_utils.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  24, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  31, col:   5):	extra tabs before function name
-ft_utils2.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  14, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  42, col:   5):	extra tabs before function name
-	TOO_MANY_TABS_FUNC   (line:  59, col:   5):	extra tabs before function name
-get_next_line.c: KO!
-	TOO_MANY_TABS_FUNC   (line:   3, col:   5):	extra tabs before function name
-	SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
-	TOO_MANY_TABS_FUNC   (line:  13, col:   5):	extra tabs before function name
-	SPACE_REPLACE_TAB    (line:  15, col:   8):	Found space when expecting tab
-	TOO_MANY_TABS_FUNC   (line:  27, col:   5):	extra tabs before function name
-	SPACE_REPLACE_TAB    (line:  29, col:   9):	Found space when expecting tab
-	TOO_MANY_TABS_FUNC   (line:  42, col:   5):	extra tabs before function name
-	ASSIGN_IN_CONTROL    (line:  47, col:  15):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  49, col:  22):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  54, col:  28):	Assignment in control structure
-	EOL_OPERATOR         (line:  54, col:  62):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  54, col:  62):	missing space after operator
-	TOO_FEW_TAB          (line:  55, col:   9):	Missing tabs for indent level
-	TOO_MANY_TABS_FUNC   (line:  66, col:   5):	extra tabs before function name
-	ASSIGN_IN_CONTROL    (line:  74, col:  32):	Assignment in control structure
-	SPACE_AFTER_KW       (line:  74, col:  35):	Missing space after keyword
-get_next_line_utils.c: KO!
-	ASSIGN_IN_CONTROL    (line:   9, col:  15):	Assignment in control structure
-	SPACE_AFTER_KW       (line:   9, col:  18):	Missing space after keyword
-	EOL_OPERATOR         (line:   9, col:  44):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:   9, col:  44):	missing space after operator
-	TOO_FEW_TAB          (line:  10, col:   9):	Missing tabs for indent level
-	ASSIGN_IN_CONTROL    (line:  44, col:  15):	Assignment in control structure
-	SPACE_AFTER_KW       (line:  44, col:  18):	Missing space after keyword
-	EOL_OPERATOR         (line:  44, col:  44):	Logic operator at the end of line
-	SPC_AFTER_OPERATOR   (line:  44, col:  44):	missing space after operator
-	TOO_FEW_TAB          (line:  45, col:   5):	Missing tabs for indent level
+ft_utils.c: OK!
+ft_utils2.c: OK!
+get_next_line.c: Error!
+	ASSIGN_IN_CONTROL    (line:  59, col:  15):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  61, col:  22):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  66, col:  28):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  86, col:  32):	Assignment in control structure
+get_next_line_utils.c: Error!
+	ASSIGN_IN_CONTROL    (line:  21, col:  15):	Assignment in control structure
+	ASSIGN_IN_CONTROL    (line:  56, col:  15):	Assignment in control structure

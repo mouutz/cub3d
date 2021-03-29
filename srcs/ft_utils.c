@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 13:18:59 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 13:19:08 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int		ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
 	int	i;
 
@@ -21,14 +33,14 @@ void	ft_putstr(char *s)
 		write(1, &s[i++], 1);
 }
 
-int		ft_is_wall(char c)
+int	ft_is_wall(char c)
 {
 	if (c == '1')
 		return (1);
 	return (0);
 }
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int		i;
 	int		nb;

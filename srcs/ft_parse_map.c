@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_map.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:55:54 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:57:44 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int		ft_parse_map_line_updown(t_info *info_map)
+int	ft_parse_map_line_updown(t_info *info_map)
 {
 	int		i;
 	int		n;
@@ -34,7 +46,7 @@ void	ft_get_len_line(t_info *info_map, t_len_map *len, int line)
 	len->check = len->l1 - len->l2;
 }
 
-int		ft_check_line1(t_info *info_map, t_len_map *len, int line)
+int	ft_check_line1(t_info *info_map, t_len_map *len, int line)
 {
 	if (info_map->map[line][0] != '1')
 		return (0);
@@ -45,13 +57,13 @@ int		ft_check_line1(t_info *info_map, t_len_map *len, int line)
 			return (0);
 		len->l1++;
 	}
-	if (info_map->map[line + 1][0] != '1' ||
-	info_map->map[line + 1][len->l2 - 1] != '1')
+	if (info_map->map[line + 1][0] != '1'
+		||info_map->map[line + 1][len->l2 - 1] != '1')
 		return (0);
 	return (1);
 }
 
-int		ft_check_line2(t_info *info_map, t_len_map *len, int line)
+int	ft_check_line2(t_info *info_map, t_len_map *len, int line)
 {
 	if (info_map->map[line + 1][0] != '1')
 		return (0);
@@ -63,13 +75,13 @@ int		ft_check_line2(t_info *info_map, t_len_map *len, int line)
 			return (0);
 		len->l2++;
 	}
-	if (info_map->map[line][0] != '1' ||
-	info_map->map[line][len->l1 - 1] != '1')
+	if (info_map->map[line][0] != '1'
+		||info_map->map[line][len->l1 - 1] != '1')
 		return (0);
 	return (1);
 }
 
-int		ft_parse_map_line_between(t_info *info_map, t_len_map *len)
+int	ft_parse_map_line_between(t_info *info_map, t_len_map *len)
 {
 	int		line;
 
@@ -79,8 +91,8 @@ int		ft_parse_map_line_between(t_info *info_map, t_len_map *len)
 		ft_get_len_line(info_map, len, line);
 		if (len->check == 0)
 		{
-			if (info_map->map[line][0] != '1' ||
-			info_map->map[line][len->l1 - 1] != '1')
+			if (info_map->map[line][0] != '1'
+				||info_map->map[line][len->l1 - 1] != '1')
 				return (0);
 		}
 		else if (len->check >= 1)

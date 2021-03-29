@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:24:56 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:24:58 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	ft_information_start(int error)
@@ -59,7 +71,7 @@ void	ft_map_error(int error)
 		ft_putstr("Error: No player positions\n");
 }
 
-int		ft_management_error(int error, char *s)
+int	ft_management_error(int error, char *s)
 {
 	if (error >= -2 && error <= 2)
 		ft_information_start(error);

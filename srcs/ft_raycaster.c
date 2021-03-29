@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_raycaster.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 12:59:49 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 12:59:50 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	ft_calcul_step_init_sidedist(t_ray *ray, t_storage *storage)
@@ -6,25 +18,25 @@ void	ft_calcul_step_init_sidedist(t_ray *ray, t_storage *storage)
 	{
 		ray->step_x = -1;
 		ray->sidedist_x = (storage->player->pos_x - ray->map_x)
-		* ray->deltadist_x;
+			* ray->deltadist_x;
 	}
 	else
 	{
 		ray->step_x = 1;
 		ray->sidedist_x = (ray->map_x + 1.0 - storage->player->pos_x)
-		* ray->deltadist_x;
+			* ray->deltadist_x;
 	}
 	if (ray->raydir_y < 0)
 	{
 		ray->step_y = -1;
 		ray->sidedist_y = (storage->player->pos_y - ray->map_y)
-		* ray->deltadist_y;
+			* ray->deltadist_y;
 	}
 	else
 	{
 		ray->step_y = 1;
 		ray->sidedist_y = (ray->map_y + 1.0 - storage->player->pos_y)
-		* ray->deltadist_y;
+			* ray->deltadist_y;
 	}
 }
 
@@ -48,11 +60,11 @@ void	ft_ddaalgo(t_ray *ray, t_storage *storage, int x)
 			ray->hit = 1;
 	}
 	if (ray->side == 0)
-		ray->perpwalldist = (ray->map_x - storage->player->pos_x +
-		(1 - ray->step_x) / 2) / ray->raydir_x;
+		ray->perpwalldist = (ray->map_x - storage->player->pos_x
+				+(1 - ray->step_x) / 2) / ray->raydir_x;
 	else
-		ray->perpwalldist = (ray->map_y - storage->player->pos_y +
-		(1 - ray->step_y) / 2) / ray->raydir_y;
+		ray->perpwalldist = (ray->map_y - storage->player->pos_y
+				+(1 - ray->step_y) / 2) / ray->raydir_y;
 	storage->zbuffer[x] = ray->perpwalldist;
 }
 

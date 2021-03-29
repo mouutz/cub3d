@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sprite.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 13:10:39 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/29 14:59:49 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	ft_sprite_texture(t_storage *s, t_sprite_info *s_i)
@@ -9,19 +21,19 @@ void	ft_sprite_texture(t_storage *s, t_sprite_info *s_i)
 	while (stripe < s_i->drawend_x)
 	{
 		s_i->texx = (int)((256 * (stripe - (-s_i->width / 2 + s_i->screen_x))
-		* s_i->texwidth / s_i->width) / 256);
+					* s_i->texwidth / s_i->width) / 256);
 		y = s_i->drawstart_y;
 		while (y < s_i->drawend_y && s_i->transformy > 0 && s_i->transformy
-		< s->zbuffer[stripe])
+			< s->zbuffer[stripe])
 		{
 			s_i->d = y * 256 - s->info->ry * 128 + s_i->height * 128;
 			s_i->texy = ((s_i->d * s_i->texheight) / s_i->height) / 256;
 			if (s->texture[4].img[s_i->texy % 64 * s->texture[4].size_line
-			+ s_i->texx % 64 * s->texture[4].bpixel / 8] != 0)
+					+ s_i->texx % 64 * s->texture[4].bpixel / 8] != 0)
 			{
 				ft_memcpy(s->mlx->data_img + 4 * s->info->rx * y + stripe * 4,
-				&s->texture[4].img[s_i->texy % 64 * s->texture[4].size_line +
-				s_i->texx % 64 * s->texture[4].bpixel / 8], sizeof(int));
+					&s->texture[4].img[s_i->texy % 64 * s->texture[4].size_line
+					+s_i->texx % 64 * s->texture[4].bpixel / 8], sizeof(int));
 			}
 			y++;
 		}
@@ -34,14 +46,14 @@ t_storage *s)
 {
 	s_i->x = sprite[sprite_order[s_i->i]].x - s->player->pos_x;
 	s_i->y = sprite[sprite_order[s_i->i]].y - s->player->pos_y;
-	s_i->inv_det = 1.0 / (s->ray->plane_x * s->player->dir_y -
-	s->player->dir_x * s->ray->plane_y);
-	s_i->transformx = s_i->inv_det * (s->player->dir_y * s_i->x -
-	s->player->dir_x * s_i->y);
-	s_i->transformy = s_i->inv_det * (-s->ray->plane_y * s_i->x +
-	s->ray->plane_x * s_i->y);
-	s_i->screen_x = (int)((s->info->rx / 2) * (1 + s_i->transformx /
-	s_i->transformy));
+	s_i->inv_det = 1.0 / (s->ray->plane_x * s->player->dir_y
+			-s->player->dir_x * s->ray->plane_y);
+	s_i->transformx = s_i->inv_det * (s->player->dir_y * s_i->x
+			-s->player->dir_x * s_i->y);
+	s_i->transformy = s_i->inv_det * (-s->ray->plane_y * s_i->x
+			+s->ray->plane_x * s_i->y);
+	s_i->screen_x = (int)((s->info->rx / 2) * (1 + s_i->transformx
+				/s_i->transformy));
 	s_i->height = abs((int)(s->info->ry / (s_i->transformy)));
 	s_i->drawstart_y = -s_i->height / 2 + s->info->ry / 2;
 	if (s_i->drawstart_y < 0)
@@ -90,9 +102,9 @@ double *sprite_distance)
 	i = 0;
 	while (i < s->info->sprite_nb)
 	{
-		sprite_distance[i] = ((s->player->pos_x - sprite[i].x) *
-		(s->player->pos_x - sprite[i].x) + (s->player->pos_y - sprite[i].y)
-		* (s->player->pos_y - sprite[i].y));
+		sprite_distance[i] = ((s->player->pos_x - sprite[i].x)
+				* (s->player->pos_x - sprite[i].x) + (s->player->pos_y
+					- sprite[i].y) * (s->player->pos_y - sprite[i].y));
 		sprite_order[i] = i;
 		i++;
 	}

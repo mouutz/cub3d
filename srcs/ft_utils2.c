@@ -1,6 +1,6 @@
 #include "../cub3d.h"
 
-int		ft_verif_rgb_is_valid(int nb[4], int n)
+int	ft_verif_rgb_is_valid(int nb[4], int n)
 {
 	if (nb[0] > 255 || nb[1] > 255 || nb[2] > 255)
 		return (-2);
@@ -11,7 +11,7 @@ int		ft_verif_rgb_is_valid(int nb[4], int n)
 	return (nb[n]);
 }
 
-int		ft_get_texture_path_west_east_s(char *s, t_info *info_map)
+int	ft_get_texture_path_west_east_s(char *s, t_info *info_map)
 {
 	int	i;
 
@@ -39,7 +39,7 @@ int		ft_get_texture_path_west_east_s(char *s, t_info *info_map)
 	return (1);
 }
 
-int		ft_get_info_map_resolution(char *s, t_info *info_map)
+int	ft_get_info_map_resolution(char *s, t_info *info_map)
 {
 	if ((ft_get_resolution(s, info_map)) == 0)
 		return (ft_management_error(10, ""));
@@ -56,7 +56,7 @@ void	ft_free_tab(char **tab)
 	free(tab);
 }
 
-int		ft_check_space_rgb(char **tab, int i)
+int	ft_check_space_rgb(char **tab, int i)
 {
 	int	n;
 	int	valid;

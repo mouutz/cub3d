@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/26 13:10:42 by msahli            #+#    #+#             */
+/*   Updated: 2021/03/26 13:10:51 by msahli           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int		ft_word_lengt(char const *s, char c)
+int	ft_word_lengt(char const *s, char c)
 {
 	int	i;
-	int lengt;
+	int	lengt;
 
 	i = 0;
 	lengt = 1;
@@ -17,10 +29,10 @@ int		ft_word_lengt(char const *s, char c)
 	return (lengt);
 }
 
-int		ft_word_count(char const *s, char c)
+int	ft_word_count(char const *s, char c)
 {
 	int	len;
-	int i;
+	int	i;
 
 	i = 0;
 	len = 0;
