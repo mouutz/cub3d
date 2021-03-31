@@ -1,57 +1,37 @@
-ft_cub3d.c: Error!
-	ASSIGN_IN_CONTROL    (line:  57, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  59, col:  20):	Assignment in control structure
-ft_draw_wall_color.c: OK!
-ft_draw_wall_texture.c: Error!
-	TOO_MANY_LINES       (line:  44, col:   1):	Function has more than 25 lines
-	TOO_MANY_LINES       (line:  75, col:   1):	Function has more than 25 lines
-ft_error.c: OK!
-ft_exit_prog.c: OK!
-ft_fill_map.c: Error!
-	ASSIGN_IN_CONTROL    (line:  37, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  42, col:  26):	Assignment in control structure
-ft_get_info.c: OK!
-ft_init.c: OK!
-ft_init_storage.c: OK!
-ft_keyboard_action.c: OK!
-ft_memcpy.c: OK!
-ft_mini_map.c: OK!
-ft_movement_player.c: OK!
-ft_parse_info.c: OK!
-ft_parse_info_2.c: OK!
-ft_parse_map.c: OK!
-ft_raycaster.c: OK!
-ft_read_map.c: Error!
-	ASSIGN_IN_CONTROL    (line:  21, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  27, col:  15):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  46, col:  13):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  48, col:  16):	Assignment in control structure
-ft_save.c: Error!
-	ASSIGN_IN_CONTROL    (line:  89, col:  19):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  91, col:  19):	Assignment in control structure
-ft_split.c: Error!
-	ASSIGN_IN_CONTROL    (line:  60, col:  20):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line: 111, col:  17):	Assignment in control structure
-ft_sprite.c: Error!
-	VLA_FORBIDDEN        (line: 116, col:  38):	Variable length array forbidden
-	VLA_FORBIDDEN        (line: 117, col:  41):	Variable length array forbidden
-ft_strcpy.c: OK!
-ft_strdup_map.c: Error!
-	ASSIGN_IN_CONTROL    (line:  29, col:  16):	Assignment in control structure
-ft_strncmp.c: OK!
-ft_texture.c: Error!
-	ASSIGN_IN_CONTROL    (line:  31, col:  25):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  34, col:  25):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  37, col:  25):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  40, col:  25):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  43, col:  25):	Assignment in control structure
-ft_utils.c: OK!
-ft_utils2.c: OK!
-get_next_line.c: Error!
-	ASSIGN_IN_CONTROL    (line:  59, col:  15):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  61, col:  22):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  66, col:  28):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  86, col:  32):	Assignment in control structure
-get_next_line_utils.c: Error!
-	ASSIGN_IN_CONTROL    (line:  21, col:  15):	Assignment in control structure
-	ASSIGN_IN_CONTROL    (line:  56, col:  15):	Assignment in control structure
+srcs/ft_cub3d.c: Error!
+Error: ASSIGN_IN_CONTROL    (line:  57, col:  19):	Assignment in control structure
+Error: ASSIGN_IN_CONTROL    (line:  59, col:  20):	Assignment in control structure
+srcs/ft_draw_wall_color.c: OK!
+srcs/ft_draw_wall_texture.c: Error!
+Error: TOO_MANY_LINES       (line:  44, col:   1):	Function has more than 25 lines
+Error: TOO_MANY_LINES       (line:  75, col:   1):	Function has more than 25 lines
+srcs/ft_error.c: OK!
+srcs/ft_exit_prog.c: OK!
+srcs/ft_fill_map.c: OK!
+srcs/ft_get_info.c: OK!
+srcs/ft_init.c: OK!
+srcs/ft_init_storage.c: OK!
+srcs/ft_keyboard_action.c: OK!
+srcs/ft_memcpy.c: OK!
+srcs/ft_mini_map.c: OK!
+srcs/ft_movement_player.c: OK!
+srcs/ft_parse_info.c: OK!
+srcs/ft_parse_info_2.c: OK!
+srcs/ft_parse_map.c: OK!
+srcs/ft_raycaster.c: OK!
+srcs/ft_read_map.c: Error!
+Error: ASSIGN_IN_CONTROL    (line:  51, col:  16):	Assignment in control structure
+srcs/ft_save.c: OK!
+srcs/ft_split.c: OK!
+srcs/ft_sprite.c: Error!
+Error: VLA_FORBIDDEN        (line: 116, col:  38):	Variable length array forbidden
+Error: VLA_FORBIDDEN        (line: 117, col:  41):	Variable length array forbidden
+srcs/ft_strcpy.c: OK!
+srcs/ft_strdup_map.c: OK!
+srcs/ft_strncmp.c: OK!
+srcs/ft_texture.c: OK!
+srcs/ft_utils.c: OK!
+srcs/ft_utils2.c: OK!
+srcs/get_next_line.c: Error!
+Error: ASSIGN_IN_CONTROL    (line:  62, col:  22):	Assignment in control structure
+srcs/get_next_line_utils.c: OK!

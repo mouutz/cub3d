@@ -6,7 +6,7 @@
 /*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 13:21:44 by msahli            #+#    #+#             */
-/*   Updated: 2021/03/29 14:55:28 by msahli           ###   ########.fr       */
+/*   Updated: 2021/03/31 15:34:41 by msahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,16 @@ int	ft_file_reading(int fd, char **storage_read, char **line)
 	int		ret_read;
 	char	*buf;
 
-	if (!(buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
+	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buf)
 		return (-1);
 	while ((ret_read = read(fd, buf, BUFFER_SIZE)))
 	{
 		if (ret_read == -1)
 			break ;
 		buf[ret_read] = '\0';
-		if ((*storage_read = ft_strjoin(*storage_read, buf))
-			&&ft_is_c(buf, '\n') == 1)
+		*storage_read = ft_strjoin(*storage_read, buf);
+		if (*storage_read && ft_is_c(buf, '\n') == 1)
 			break ;
 	}
 	free(buf);
@@ -83,7 +84,8 @@ int	get_next_line(int fd, char **line)
 		return (GNL_ERROR);
 	if (fd >= 0 && !(storage_read[fd]))
 	{
-		if (!(storage_read[fd] = (char *)malloc(1)))
+		storage_read[fd] = (char *)malloc(1);
+		if (!(storage_read[fd]))
 			return (0);
 		storage_read[fd][0] = '\0';
 	}

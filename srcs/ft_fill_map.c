@@ -34,12 +34,14 @@ void	ft_malloc_new_map(t_info *info_map, int len_y, int len_max)
 	int		y;
 	char	**new_map;
 
-	if (!(new_map = (char **)malloc(sizeof(char *) * (len_y + 1))))
+	new_map = (char **)malloc(sizeof(char *) * (len_y + 1));
+	if (!(new_map))
 		return ;
 	y = 0;
 	while (y < len_y)
 	{
-		if (!(new_map[y] = (char *)malloc(sizeof(char) * (len_max + 1))))
+		new_map[y] = (char *)malloc(sizeof(char) * (len_max + 1));
+		if (!(new_map[y]))
 			return ;
 		y++;
 	}

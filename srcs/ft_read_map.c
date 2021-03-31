@@ -6,7 +6,7 @@
 /*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 12:59:44 by msahli            #+#    #+#             */
-/*   Updated: 2021/03/26 13:01:16 by msahli           ###   ########.fr       */
+/*   Updated: 2021/03/31 14:46:11 by msahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,22 @@ int	ft_read_map(t_info *info_map, int fd, char *line)
 	int		i;
 	char	*map_tmp;
 
-	i = 0;
-	if (!(map_tmp = (char *)malloc(sizeof(char))))
+	i = 1;
+	map_tmp = (char *)malloc(sizeof(char));
+	if (!(map_tmp))
 		return (ft_management_error(9, "Error malloc"));
 	map_tmp[0] = 0;
 	line = ft_strdup_map(line);
 	map_tmp = ft_strjoin_point(map_tmp, line);
-	free(line);
-	while ((i = get_next_line(fd, &line)) != 0)
+	if (i == 0)
+		free(line);
+	while (i != 0)
 	{
+		i = get_next_line(fd, &line);
 		line = ft_strdup_map(line);
 		map_tmp = ft_strjoin_point(map_tmp, line);
 		free(line);
 	}
-	free(line);
 	info_map->map = ft_split(map_tmp, '.');
 	free(map_tmp);
 	return (1);
@@ -43,7 +45,8 @@ int	ft_read_info(char *s, t_info *info_map)
 	char	*line;
 
 	i = 0;
-	if ((fd = open(s, O_RDWR)) == -1)
+	fd = open(s, O_RDWR);
+	if (fd == -1)
 		return (ft_management_error(2, ""));
 	while (((i = get_next_line(fd, &line)) != 0) && !ft_is_wall(line[0]))
 	{

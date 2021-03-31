@@ -45,7 +45,7 @@ CFLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(OBJ) $(INCLUDES)
-	gcc -o $(NAME) -lm -lmlx -framework OpenGL -framework AppKit $(OBJ)
+	gcc -o $(NAME) -lm -lmlx -framework OpenGL -framework AppKit $(OBJ) -g -fsanitize=address
 
 clean :
 	rm -f $(OBJ)

@@ -6,7 +6,7 @@
 /*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 13:10:42 by msahli            #+#    #+#             */
-/*   Updated: 2021/03/26 13:10:51 by msahli           ###   ########.fr       */
+/*   Updated: 2021/03/31 15:06:13 by msahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ char	**ft_alloc(char const *s, char c, int word_count, char **words)
 	storage = 0;
 	while (storage < word_count)
 	{
-		if (!(word = (char *)malloc(sizeof(char) * (ft_word_lengt(s + i, c)))))
+		word = (char *)malloc(sizeof(char) * (ft_word_lengt(s + i, c)));
+		if (!word)
 		{
 			while (storage >= 0)
 				free(words[storage--]);
@@ -108,7 +109,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	word_count = ft_word_count(s, c);
-	if (!(words = (char **)malloc(sizeof(char *) * (word_count + 1))))
+	words = (char **)malloc(sizeof(char *) * (word_count + 1));
+	if (!words)
 		return (NULL);
 	words = ft_alloc(s, c, word_count, words);
 	words = ft_create_tab(s, c, word_count, words);

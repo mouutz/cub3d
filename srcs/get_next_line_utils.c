@@ -6,7 +6,7 @@
 /*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 13:21:00 by msahli            #+#    #+#             */
-/*   Updated: 2021/03/29 14:57:25 by msahli           ###   ########.fr       */
+/*   Updated: 2021/03/31 15:37:41 by msahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strdup_c(char *str, char c)
 	char	*new;
 
 	i = 0;
-	if (!(new = (char *)malloc(sizeof(char)
-				*(ft_strlen_c(str, c) + 1))))
+	new = (char *)malloc(sizeof(char)*(ft_strlen_c(str, c) + 1));
+	if (!new)
 		return (NULL);
 	while (str && str[i] && str[i] != c)
 	{
@@ -53,8 +53,9 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	if (!(new = (char *)malloc(sizeof(char)
-				*((ft_strlen_c(s1, '\0') + ft_strlen_c(s2, '\0') + 1)))))
+	new = (char *)malloc(sizeof(char)
+			*((ft_strlen_c(s1, '\0') + ft_strlen_c(s2, '\0') + 1)));
+	if (!new)
 		return (NULL);
 	while (s1[i])
 	{

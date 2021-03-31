@@ -6,7 +6,7 @@
 /*   By: msahli <msahli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 13:10:45 by msahli            #+#    #+#             */
-/*   Updated: 2021/03/26 13:10:49 by msahli           ###   ########.fr       */
+/*   Updated: 2021/03/31 15:00:23 by msahli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,11 @@ void	ft_save(t_info *info_map, t_mlx *mlx)
 	ft_init_storage(info_map, mlx, &player, &storage);
 	ft_init_pos_player(&storage, &player);
 	storage.save = 1;
-	if ((mlx->ptr = mlx_init()) == NULL)
+	mlx->ptr = mlx_init();
+	mlx->win = mlx_new_window(mlx->ptr, info_map->rx, info_map->ry, "Save");
+	if (mlx->ptr == NULL)
 		ft_management_error(9, "Error: init mlx fail\n");
-	if ((mlx->win = mlx_new_window(mlx->ptr, info_map->rx,
-				info_map->ry, "Save")) == NULL)
+	if (mlx->win == NULL)
 		ft_management_error(9, "Error: Windows fail\n");
 	ft_init_texture(&storage, texture, 64, 64);
 	ft_expose(&storage);

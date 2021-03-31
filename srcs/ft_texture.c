@@ -28,20 +28,25 @@ int	ft_init_texture_data(t_texture *texture)
 int	ft_init_texture(t_storage *s, t_texture *texture, int w,
 int h)
 {
-	if ((texture[0].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
-				s->info->north_t, &w, &h)) == NULL)
+	texture[0].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
+			s->info->north_t, &w, &h);
+	texture[1].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
+			s->info->south_t, &w, &h);
+	texture[2].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
+			s->info->west_t, &w, &h);
+	texture[3].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
+			s->info->east_t, &w, &h);
+	texture[4].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
+			s->info->sprite_t, &w, &h);
+	if (texture[0].ptr == NULL)
 		return (ft_management_error(9, "Error : corruption texture north\n"));
-	if ((texture[1].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
-				s->info->south_t, &w, &h)) == NULL)
+	if (texture[1].ptr == NULL)
 		return (ft_management_error(9, "Error : corruption texture south\n"));
-	if ((texture[2].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
-				s->info->west_t, &w, &h)) == NULL)
+	if (texture[2].ptr == NULL)
 		return (ft_management_error(9, "Error : corruption texture west\n"));
-	if ((texture[3].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
-				s->info->east_t, &w, &h)) == NULL)
+	if (texture[3].ptr == NULL)
 		return (ft_management_error(9, "Error : corruption texture east\n"));
-	if ((texture[4].ptr = mlx_xpm_file_to_image(s->mlx->ptr,
-				s->info->sprite_t, &w, &h)) == NULL)
+	if (texture[4].ptr == NULL)
 		return (ft_management_error(9, "Error : corruption texture sprite\n"));
 	texture[5].ptr = NULL;
 	ft_init_texture_data(texture);
